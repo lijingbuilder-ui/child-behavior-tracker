@@ -1,0 +1,13 @@
+{
+  "name": "behavior-api",
+  "version": "0.1.0",
+  "private": true,
+  "main": "index.js",
+  "dependencies": {
+    "tencentcloud-sdk-nodejs": "4.1.326",
+    "wx-server-sdk": "4.0.2"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "desc": "儿童行为记录页面索引",
+  "rules": [
+    {
+      "action": "disallow",
+      "page": "*"
+    }
+  ]
+}

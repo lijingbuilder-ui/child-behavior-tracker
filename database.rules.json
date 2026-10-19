@@ -1,0 +1,8 @@
+{
+  "rules": {
+    "behavior_records": {
+      ".read": false,
+      ".write": false
+    }
+  }
+}

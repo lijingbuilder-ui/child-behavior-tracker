@@ -1,0 +1,59 @@
+page {
+  background: #f4f6f1;
+  color: #263126;
+  font-size: 30rpx;
+}
+
+.page {
+  padding: 32rpx;
+}
+
+.card {
+  margin-bottom: 24rpx;
+  padding: 28rpx;
+  border-radius: 20rpx;
+  background: #ffffff;
+  box-shadow: 0 6rpx 24rpx rgba(38, 49, 38, 0.06);
+}
+
+.title {
+  margin-bottom: 12rpx;
+  font-size: 40rpx;
+  font-weight: 700;
+}
+
+.muted {
+  color: #768076;
+  font-size: 26rpx;
+}
+
+.primary {
+  color: #ffffff;
+  background: #4f6f52;
+}
+
+.secondary {
+  color: #4f6f52;
+  background: #e3ebe0;
+}
+
+.danger {
+  color: #a33a3a;
+}
+
+.field-label {
+  display: block;
+  margin: 22rpx 0 10rpx;
+  font-weight: 600;
+}
+
+input,
+textarea,
+picker {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 20rpx;
+  border: 2rpx solid #dfe5dc;
+  border-radius: 14rpx;
+  background: #fbfcfa;
+}

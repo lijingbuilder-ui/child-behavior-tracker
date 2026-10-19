@@ -1,0 +1,22 @@
+.notice {
+  padding: 20rpx;
+  border-radius: 12rpx;
+  color: #715b22;
+  background: #fff5d8;
+  font-size: 26rpx;
+}
+
+textarea {
+  min-height: 110rpx;
+}
+
+.picker-value {
+  padding: 20rpx;
+  border: 2rpx solid #dfe5dc;
+  border-radius: 14rpx;
+  background: #fbfcfa;
+}
+
+.transcript {
+  color: #5e685e;
+}

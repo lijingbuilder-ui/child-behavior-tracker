@@ -1,0 +1,42 @@
+{
+  "pages": [
+    "pages/record/record",
+    "pages/review/review",
+    "pages/timeline/timeline",
+    "pages/stats/stats"
+  ],
+  "window": {
+    "navigationBarTitleText": "儿童行为记录",
+    "navigationBarBackgroundColor": "#4f6f52",
+    "navigationBarTextStyle": "white",
+    "backgroundColor": "#f4f6f1",
+    "backgroundTextStyle": "light"
+  },
+  "tabBar": {
+    "color": "#777777",
+    "selectedColor": "#4f6f52",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/record/record",
+        "text": "记录"
+      },
+      {
+        "pagePath": "pages/timeline/timeline",
+        "text": "时间线"
+      },
+      {
+        "pagePath": "pages/stats/stats",
+        "text": "周统计"
+      }
+    ]
+  },
+  "permission": {
+    "scope.record": {
+      "desc": "用于录入行为事件，录音转文字完成后默认立即删除"
+    }
+  },
+  "requiredPrivateInfos": ["getRecorderManager"],
+  "sitemapLocation": "sitemap.json",
+  "style": "v2"
+}
