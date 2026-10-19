@@ -21,14 +21,15 @@ Page({
       wx.navigateBack();
       return;
     }
+    const category = CATEGORIES.includes(pending.abc.category) ? pending.abc.category : "其他";
     this.setData({
       childAlias: pending.childAlias || "孩子",
       transcript: pending.transcript || "",
       antecedent: pending.abc.antecedent || "",
       behavior: pending.abc.behavior || "",
       consequence: pending.abc.consequence || "",
-      category: CATEGORIES.includes(pending.abc.category) ? pending.abc.category : "其他",
-      categoryIndex: Math.max(CATEGORIES.indexOf(pending.abc.category), 0),
+      category,
+      categoryIndex: CATEGORIES.indexOf(category),
       intensity: pending.abc.intensity || 3
     });
   },

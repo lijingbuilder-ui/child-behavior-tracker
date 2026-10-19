@@ -5,7 +5,7 @@
   "description": "儿童行为记录微信小程序 MVP",
   "scripts": {
     "test": "node --test tests/*.test.js",
-    "check": "node --check miniprogram/app.js && node --check cloudfunctions/behaviorApi/index.js && node --test tests/*.test.js"
+    "check": "for file in miniprogram/app.js miniprogram/config.js miniprogram/pages/*/*.js cloudfunctions/behaviorApi/index.js cloudfunctions/behaviorApi/lib/*.js; do node --check \"$file\" || exit 1; done && node --test tests/*.test.js"
   },
   "engines": {
     "node": ">=18"
