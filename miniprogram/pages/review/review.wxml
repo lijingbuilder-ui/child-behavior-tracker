@@ -1,0 +1,30 @@
+<view class="page">
+  <view class="card">
+    <view class="title">人工确认</view>
+    <view class="notice">AI 可能理解错误。请在保存前核对和修改，尤其不要把推测当成事实。</view>
+
+    <label class="field-label">A · 前因（行为前发生了什么）</label>
+    <textarea maxlength="500" auto-height value="{{antecedent}}" data-field="antecedent" bindinput="setField" />
+
+    <label class="field-label">B · 行为（可观察、可描述）</label>
+    <textarea maxlength="500" auto-height value="{{behavior}}" data-field="behavior" bindinput="setField" />
+
+    <label class="field-label">C · 后果（行为后发生了什么）</label>
+    <textarea maxlength="500" auto-height value="{{consequence}}" data-field="consequence" bindinput="setField" />
+
+    <label class="field-label">行为类别</label>
+    <picker mode="selector" range="{{categories}}" value="{{categoryIndex}}" bindchange="onCategoryChange">
+      <view class="picker-value">{{category}} ›</view>
+    </picker>
+
+    <label class="field-label">强度：{{intensity}} / 5</label>
+    <slider min="1" max="5" step="1" value="{{intensity}}" activeColor="#4f6f52" show-value bindchange="onIntensityChange" />
+  </view>
+
+  <view class="card transcript">
+    <view class="field-label">原始文字（可修改）</view>
+    <textarea maxlength="1000" auto-height value="{{transcript}}" data-field="transcript" bindinput="setField" />
+  </view>
+
+  <button class="primary" loading="{{saving}}" disabled="{{saving}}" bindtap="save">确认并保存</button>
+</view>

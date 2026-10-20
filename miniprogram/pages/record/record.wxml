@@ -1,0 +1,35 @@
+<view class="page">
+  <view class="card intro">
+    <view class="title">记录一次行为</view>
+    <view class="muted">说清行为前发生了什么、具体行为和之后的结果。AI 只做初步整理，保存前请人工确认。</view>
+  </view>
+
+  <view class="card">
+    <label class="field-label">称呼（避免填写真实姓名）</label>
+    <input maxlength="20" value="{{childAlias}}" bindinput="onChildInput" placeholder="例如：孩子、小明" />
+
+    <view class="voice-area">
+      <button wx:if="{{!recording}}" class="primary voice-button" loading="{{processing}}" disabled="{{processing}}" bindtap="startRecording">
+        开始语音记录
+      </button>
+      <button wx:else class="stop-button voice-button" bindtap="stopRecording">
+        停止录音（{{elapsed}} 秒）
+      </button>
+      <view wx:if="{{status}}" class="status">{{status}}</view>
+      <view class="privacy">原始录音在转写后默认删除，不进入行为档案。</view>
+    </view>
+  </view>
+
+  <view class="divider"><text>或使用文字</text></view>
+
+  <view class="card">
+    <textarea
+      maxlength="1000"
+      auto-height
+      value="{{manualText}}"
+      bindinput="onTextInput"
+      placeholder="例如：晚饭后让他收玩具，他大哭并把积木扔到地上；我陪他深呼吸，随后一起收好了。"
+    />
+    <button class="secondary analyze-button" loading="{{processing}}" disabled="{{processing}}" bindtap="analyzeText">AI 整理表单</button>
+  </view>
+</view>

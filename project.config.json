@@ -1,0 +1,17 @@
+{
+  "description": "儿童行为记录微信小程序",
+  "miniprogramRoot": "miniprogram/",
+  "cloudfunctionRoot": "cloudfunctions/",
+  "setting": {
+    "urlCheck": true,
+    "es6": true,
+    "postcss": true,
+    "minified": true,
+    "enhance": true,
+    "packNpmManually": false
+  },
+  "compileType": "miniprogram",
+  "appid": "wx38932b267eef18ef",
+  "projectname": "child-behavior-tracker",
+  "condition": {}
+}

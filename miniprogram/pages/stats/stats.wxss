@@ -1,0 +1,77 @@
+.range {
+  margin-bottom: 28rpx;
+}
+
+.state {
+  padding: 100rpx 0;
+  text-align: center;
+}
+
+.summary {
+  display: flex;
+  gap: 20rpx;
+}
+
+.metric {
+  flex: 1;
+  text-align: center;
+}
+
+.number {
+  margin-bottom: 8rpx;
+  color: #4f6f52;
+  font-size: 56rpx;
+  font-weight: 700;
+}
+
+.section-title {
+  margin-bottom: 22rpx;
+  font-size: 32rpx;
+  font-weight: 700;
+}
+
+.bar-row {
+  display: flex;
+  align-items: center;
+  margin: 18rpx 0;
+}
+
+.bar-label {
+  width: 66rpx;
+}
+
+.category-label {
+  width: 150rpx;
+  font-size: 24rpx;
+}
+
+.bar-track {
+  flex: 1;
+  height: 20rpx;
+  overflow: hidden;
+  border-radius: 10rpx;
+  background: #edf0eb;
+}
+
+.bar {
+  min-width: 0;
+  height: 100%;
+  border-radius: 10rpx;
+  background: #789571;
+}
+
+.category-bar {
+  background: #d09d62;
+}
+
+.bar-count {
+  width: 52rpx;
+  text-align: right;
+}
+
+.tip {
+  padding: 24rpx;
+  color: #716b5a;
+  font-size: 24rpx;
+  line-height: 1.6;
+}

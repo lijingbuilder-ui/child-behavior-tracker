@@ -1,0 +1,40 @@
+<view class="page">
+  <view class="title">本周统计</view>
+  <view class="muted range">{{rangeLabel}}</view>
+
+  <view wx:if="{{loading}}" class="state">正在加载…</view>
+  <view wx:elif="{{error}}" class="state danger">{{error}}</view>
+  <block wx:else>
+    <view class="summary">
+      <view class="card metric">
+        <view class="number">{{summary.total}}</view>
+        <view class="muted">记录次数</view>
+      </view>
+      <view class="card metric">
+        <view class="number">{{summary.averageIntensity}}</view>
+        <view class="muted">平均强度</view>
+      </view>
+    </view>
+
+    <view class="card">
+      <view class="section-title">每日次数</view>
+      <view wx:for="{{daily}}" wx:key="date" class="bar-row">
+        <text class="bar-label">{{item.label}}</text>
+        <view class="bar-track"><view class="bar" style="width: {{item.percent}}%;"></view></view>
+        <text class="bar-count">{{item.count}}</text>
+      </view>
+    </view>
+
+    <view class="card">
+      <view class="section-title">行为类别</view>
+      <view wx:if="{{!categories.length}}" class="muted">本周暂无记录</view>
+      <view wx:for="{{categories}}" wx:key="name" class="bar-row">
+        <text class="category-label">{{item.name}}</text>
+        <view class="bar-track"><view class="bar category-bar" style="width: {{item.percent}}%;"></view></view>
+        <text class="bar-count">{{item.count}}</text>
+      </view>
+    </view>
+
+    <view class="tip">统计用于观察模式，不代表诊断结论。如行为涉及安全风险，请及时联系专业人员。</view>
+  </block>
+</view>

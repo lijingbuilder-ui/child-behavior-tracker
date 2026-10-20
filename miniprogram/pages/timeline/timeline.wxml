@@ -1,0 +1,27 @@
+<view class="page">
+  <view class="header">
+    <view class="title">行为时间线</view>
+    <view class="muted">下拉可刷新，最近显示 50 条。</view>
+  </view>
+
+  <view wx:if="{{loading && !records.length}}" class="empty">正在加载…</view>
+  <view wx:elif="{{error}}" class="empty danger">{{error}}</view>
+  <view wx:elif="{{!records.length}}" class="empty">
+    <view>还没有行为记录</view>
+    <view class="muted">前往“记录”添加第一条。</view>
+  </view>
+
+  <view wx:for="{{records}}" wx:key="_id" class="timeline-row">
+    <view class="dot"></view>
+    <view class="card record-card">
+      <view class="record-head">
+        <text class="category">{{item.abc.category}}</text>
+        <text class="time">{{item.timeLabel}}</text>
+      </view>
+      <view class="child">{{item.childAlias}} · 强度 {{item.abc.intensity}}/5</view>
+      <view class="abc"><text>A</text>{{item.abc.antecedent}}</view>
+      <view class="abc"><text>B</text>{{item.abc.behavior}}</view>
+      <view class="abc"><text>C</text>{{item.abc.consequence}}</view>
+    </view>
+  </view>
+</view>
