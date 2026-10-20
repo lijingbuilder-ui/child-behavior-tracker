@@ -36,7 +36,6 @@
       "desc": "用于录入行为事件，录音转文字完成后默认立即删除"
     }
   },
-  "requiredPrivateInfos": ["getRecorderManager"],
   "sitemapLocation": "sitemap.json",
   "style": "v2"
 }
